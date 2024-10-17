@@ -105,8 +105,7 @@ if __name__ == "__main__":
    - Click on "New Channel".
    - Give your channel a name (e.g., "Smart Lighting Data").
    - In "Field 1", enter "LDR_Data".
-   - In "Field 2", enter "LED_Data".
-   - In "Field 3", enter "Buzzer_Data".
+   - In "Field 2", enter "Buzzer_Data".
    - Click on "Save Channel".
 
 3. **Take the Channel ID:**
