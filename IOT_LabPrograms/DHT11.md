@@ -46,7 +46,7 @@ python3 -m pip install adafruit-circuitpython-dht
 ```bash
 python3 file.py
 ```
-##Code
+## Code
 ```python
 import time
 import board
@@ -71,7 +71,7 @@ while True:
     time.sleep(1)
 ```
 
-##Code with Cloud
+## Code with Cloud
 ```python
 import time
 import board
