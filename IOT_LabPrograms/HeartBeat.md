@@ -110,7 +110,7 @@ void loop() {
 ```
 
 ## Output:
-   - Displays the heart rate in beats per minute (bpm) on the LCD.
+   - Displays the heart rate in beats per minute (bpm) on the LCD or Serial Monitor.
    - If no pulse is detected, it shows "No pulse".
 
 ## Connections:
