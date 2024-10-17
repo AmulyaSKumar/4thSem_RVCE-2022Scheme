@@ -78,8 +78,8 @@ def PIR():
             time.sleep(5)
 
         # Send data to ThingSpeak
-        Intrusion = GPIO.input(7)
-        params = urllib.parse.urlencode({'field1': Intrusion, 'key': key})
+        Data = GPIO.input(7)
+        params = urllib.parse.urlencode({'field1': Data, 'key': key})
         headers = {"Content-type": "application/x-www-form-urlencoded", "Accept": "text/plain"}
         
         # Connect to ThingSpeak
@@ -114,7 +114,7 @@ To configure ThingSpeak for receiving data from your PIR sensor, follow these st
 1. After logging in, click on the **"Channels"** tab.
 2. Click on **"New Channel"**.
 3. Give your channel a name (e.g., **"PIR Sensor Data"**).
-4. In the **"Field 1"** input box, enter a name (e.g., **"Intrusion Status"**).
+4. In the **"Field 1"** input box, enter a name (e.g., **"Data"**).
 5. Click on **"Save Channel"**.
 
 ### Get Your API Key
