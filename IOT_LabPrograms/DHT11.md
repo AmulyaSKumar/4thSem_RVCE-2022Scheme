@@ -5,7 +5,6 @@
 - DHT11 Temperature and Humidity Sensor
 - Breadboard
 - Jumper Wires
-- Resistor (4.7kΩ or 10kΩ, if required)
 
 ## Purpose
 To measure and display the temperature and humidity levels in the environment using the DHT11 sensor and Raspberry Pi.
