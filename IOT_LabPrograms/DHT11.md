@@ -117,6 +117,9 @@ while True:
     # Wait before taking the next reading
     time.sleep(15)
 ```
+### Question
+What does `use_pulseio=False` mean in the `adafruit_dht.DHT11` sensor library?
+The `use_pulseio=False` argument disables the use of PulseIO, which reads pulse lengths from the DHT sensor. It is useful on microcontrollers that don’t support PulseIO or when PulseIO causes compatibility issues. The library will use alternate methods for reading data in this case.
 
 ### Applications
 - **Weather Monitoring:** Used in home weather stations to track local weather conditions.
