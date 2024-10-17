@@ -47,17 +47,17 @@ void loop() {
     delay(3000); // 3000 milliseconds = 3 seconds
     digitalWrite(led3, LOW);
 }
-
-/* 
-   Output:
+```
+ 
+##  Output:
    - LED 1 will turn on for 1 second, then turn off.
    - LED 2 will turn on for 2 seconds, then turn off.
    - LED 3 will turn on for 3 seconds, then turn off.
    - The sequence will repeat continuously.
 
-   Connections:
+ ##  Connections:
    - Connect the longer leg (anode) of LED 1 to digital pin 11 on the Arduino.
    - Connect the longer leg (anode) of LED 2 to digital pin 12 on the Arduino.
    - Connect the longer leg (anode) of LED 3 to digital pin 13 on the Arduino.
    - Connect the shorter leg (cathode) of all LEDs to the GND pin on the Arduino.
-*/
+
