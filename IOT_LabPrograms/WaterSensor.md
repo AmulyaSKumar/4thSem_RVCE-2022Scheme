@@ -34,9 +34,6 @@ To detect the presence of water using a water sensor and send an email notificat
    - Copy the generated app password and save it in a secure text file.
    - In your code, use this app password without any spaces.
 
-5. **Configure the Recipient's Email**:
-   - You can specify any Gmail address as the recipient.
-
 ## Code
 ```python
 import RPi.GPIO as GPIO
@@ -57,7 +54,7 @@ GPIO.setup(WPIN, GPIO.IN)
 # Function to send email notification
 def send_email():
     msg = MIMEText('Water sensor detected water!')
-    msg['Subject'] = 'Alert: Water sensor is wet!'
+    msg['Subject'] = 'Water sensor Update!'
     msg['From'] = EMAIL_ADDRESS
     msg['To'] = TO_EMAIL
 
