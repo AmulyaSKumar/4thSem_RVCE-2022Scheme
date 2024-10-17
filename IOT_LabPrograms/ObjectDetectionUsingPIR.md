@@ -37,12 +37,12 @@ try:
    
     while True:
         if GPIO.input(pir_pin):  # If motion is detected
-            print("Motion detected!")
+            print("Object detected")
             GPIO.output(led_pin, GPIO.HIGH)  # Turn on LED
             time.sleep(2)
             GPIO.output(led_pin, GPIO.LOW)
         else:
-            print("No motion detected")
+            print("No detected")
         time.sleep(1)
 except KeyboardInterrupt:
     print("Exiting...")
