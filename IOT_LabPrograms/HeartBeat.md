@@ -1,7 +1,7 @@
-# Arduino Pulse Sensor with LCD Experiment
+# Arduino Pulse Sensor 
 
 ## Aim:
-To read and display the heart rate using a Pulse Sensor connected to an Arduino board and show the results on an LCD.
+To read and display the heart rate using a Pulse Sensor connected to an Arduino board and show the result.
 
 ## Components Required:
 - 1 x Arduino Uno
@@ -11,7 +11,7 @@ To read and display the heart rate using a Pulse Sensor connected to an Arduino 
 - Breadboard
 
 ## Purpose of the Experiment:
-This experiment combines the use of a Pulse Sensor and an LCD to visually display heart rate readings in real-time. This project illustrates how to handle multiple components in an Arduino environment.
+This experiment combines the use of a Pulse Sensor and to visually display heart rate readings in real-time.
 
 ## Installing LiquidCrystal  and PulseSensor Playground Library
 
@@ -20,23 +20,23 @@ This experiment combines the use of a Pulse Sensor and an LCD to visually displa
 3. **In the Library Manager**, type "LiquidCrystal" & "PulseSensor Playground" in the search bar.
 4. If it is not installed, click on the **Install** button.
 
-
-## Applications:
-- Health monitoring systems.
-- Fitness devices that provide immediate feedback.
-- Educational projects involving sensors and displays.
-
+## Connections:
+   - Connect the Pulse Sensor's VCC pin to the 5V pin on the Arduino.
+   - Connect the Pulse Sensor's GND pin to the GND pin on the Arduino.
+   - Connect the Pulse Sensor's signal pin to analog pin A0 on the Arduino.
+   - Connect the LCD as follows:
+     - VCC to 5V on Arduino
+     - GND to GND on Arduino
+     - SDA to A4 on Arduino
+     - SCL to A5 on Arduino
+     - Adjust the potentiometer for LCD contrast.
+       
 ## Code:
 ```cpp
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
 #include <PulseSensorPlayground.h>
 
 // Create an instance of the PulseSensorPlayground class
 PulseSensorPlayground pulseSensor;
-
-// Create an instance of the LCD class
-LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address 0x27, 16 columns, 2 rows
 
 const int pulsePin = A0; // Analog pin where the pulse sensor is connected
 
@@ -113,13 +113,6 @@ void loop() {
    - Displays the heart rate in beats per minute (bpm) on the LCD or Serial Monitor.
    - If no pulse is detected, it shows "No pulse".
 
-## Connections:
-   - Connect the Pulse Sensor's VCC pin to the 5V pin on the Arduino.
-   - Connect the Pulse Sensor's GND pin to the GND pin on the Arduino.
-   - Connect the Pulse Sensor's signal pin to analog pin A0 on the Arduino.
-   - Connect the LCD as follows:
-     - VCC to 5V on Arduino
-     - GND to GND on Arduino
-     - SDA to A4 on Arduino
-     - SCL to A5 on Arduino
-     - Adjust the potentiometer for LCD contrast.
+## Applications:
+- Health monitoring systems.
+- Fitness devices that provide immediate feedback.
