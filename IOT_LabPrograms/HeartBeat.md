@@ -47,11 +47,6 @@ void setup() {
   pulseSensor.analogInput(pulsePin);
   pulseSensor.setThreshold(550); // Set the threshold for detecting beats
   pulseSensor.begin();
-  
-  // Initialize the LCD
-  lcd.begin();
-  lcd.backlight(); // Turn on the backlight
-  lcd.print("Heart Rate: ");
 }
 
 void loop() {
@@ -60,12 +55,11 @@ void loop() {
   
   // Print the heart rate if it is valid
   if (bpm > 0) {
-    lcd.setCursor(0, 1); // Set cursor to the second row
-    lcd.print(bpm);
-    lcd.print(" bpm     "); // Add spaces to clear previous values
+    serial.print("HeartBeat:");
+    serial.print(bpm);
+    serial.println(" bpm "); 
   } else {
-    lcd.setCursor(0, 1);
-    lcd.print("No pulse    ");
+    serial.println("No pulse  detected ");
   }
 ```
 
@@ -85,8 +79,6 @@ LiquidCrystal_I2C lcd(0x27, 16, 2); // I2C address 0x27, 16 columns, 2 rows
 const int pulsePin = A0; // Analog pin where the pulse sensor is connected
 
 void setup() {
-  Serial.begin(9600);
-  
   // Initialize the PulseSensorPlayground library
   pulseSensor.analogInput(pulsePin);
   pulseSensor.setThreshold(550); // Set the threshold for detecting beats
@@ -106,7 +98,7 @@ void loop() {
   if (bpm > 0) {
     lcd.setCursor(0, 1); // Set cursor to the second row
     lcd.print(bpm);
-    lcd.print(" bpm     "); // Add spaces to clear previous values
+    lcd.print(" bpm   "); // Add spaces to clear previous values
   } else {
     lcd.setCursor(0, 1);
     lcd.print("No pulse    ");
