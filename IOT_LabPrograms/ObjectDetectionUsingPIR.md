@@ -64,7 +64,7 @@ GPIO.setup(18, GPIO.OUT)  # LED pin
 GPIO.setwarnings(False)
 
 # Put your API Key here
-key = "76I4VO9R18ABOURD"  
+key = ""  
 
 def PIR():
     while True:
