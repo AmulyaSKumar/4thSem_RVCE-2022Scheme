@@ -6,7 +6,6 @@ To detect the presence of water using a water sensor and send an email notificat
 ## Components Required
 - Raspberry Pi (any model with GPIO support)
 - Water sensor
-- Buzzer
 - Jumper wires
 - Breadboard (optional)
 - Internet connection (for sending emails)
@@ -17,14 +16,10 @@ To detect the presence of water using a water sensor and send an email notificat
    - Connect the GND pin of the water sensor to a GND pin on the Raspberry Pi.
    - Connect the output pin of the water sensor to GPIO pin 4 (WPIN) on the Raspberry Pi.
 
-2. **Buzzer**:
-   - Connect the positive (longer) pin of the buzzer to GPIO pin 17 (BUZZERPIN) on the Raspberry Pi.
-   - Connect the negative (shorter) pin of the buzzer to a GND pin on the Raspberry Pi.
-
 # Instructions for Setting Up an App Password in Gmail
 
 1. **Navigate to Google Account Settings**:
-   - In your Gmail inbox, click on **Manage your Google Account** (located next to the Sign Out button).
+   - In your Gmail inbox, click on **Manage your Google Account** 
 
 2. **Activate 2-Step Verification**:
    - Go to the **Security** section.
@@ -32,15 +27,15 @@ To detect the presence of water using a water sensor and send an email notificat
 
 3. **Create an App Password**:
    - Once 2-Step Verification is enabled, look for the **App Passwords** option.
-   - Enter a name for the application (you can choose any name) and click **Create**.
-   - A unique app password will be generated, appearing as `aaaa aaaa aaaa aaaa`.
+   - Enter a name for the application.
+   - A unique app password will be generated.
 
 4. **Store the App Password**:
    - Copy the generated app password and save it in a secure text file.
    - In your code, use this app password without any spaces.
 
 5. **Configure the Recipient's Email**:
-   - You can specify any Gmail address as the recipient (preferably one with 2-Step Verification disabled).
+   - You can specify any Gmail address as the recipient.
 
 ## Code
 ```python
@@ -50,16 +45,14 @@ from email.mime.text import MIMEText
 import time
 
 # Email settings
-EMAIL_ADDRESS = 'xyz@gmail.com'  # Your email address
+EMAIL_ADDRESS = 'abc@gmail.com'  # Your email address
 EMAIL_PASSWORD = ' '   # Your email password
 TO_EMAIL = ''    # Recipient's email address
 
 # Set up GPIO
 WPIN = 4  
-BUZZERPIN = 17
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(WPIN, GPIO.IN)
-GPIO.setup(BUZZERPIN, GPIO.OUT)
 
 # Function to send email notification
 def send_email():
@@ -85,10 +78,9 @@ try:
     while True:
         if GPIO.input(WPIN):  # If water is detected
             print("Water sensor is wet!")
-            GPIO.output(BUZZERPIN, True)
             send_email()
             time.sleep(5)  # Delay to avoid multiple detections
-            GPIO.output(BUZZERPIN, False)
+            
 
 except KeyboardInterrupt:
     print("Program terminated")
@@ -97,7 +89,7 @@ finally:
 ```
 
 ## Output
-- When water is detected, the buzzer sounds an alert, and an email notification is sent to the specified recipient.
+- When water is detected and an email notification is sent to the specified recipient.
 
 ## Applications
 - **Home Safety**: Detecting water leaks in homes to prevent damage.
