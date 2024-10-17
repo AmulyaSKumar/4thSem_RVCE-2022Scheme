@@ -7,9 +7,6 @@
 - **Breadboard** (optional, for easy connections)
 - **Jumper Wires**
 - **USB Power Supply**
-  
-![MQ-4 Gas Sensor](![image](https://github.com/user-attachments/assets/9c86bb06-964f-4fc5-8760-d041e231379f)
-)
 
 ## Purpose
 To develop a gas detector that can sense the presence of gas (e.g., LPG, methane) and indicate it using an LED. The readings are also printed to the serial monitor for monitoring purposes.
