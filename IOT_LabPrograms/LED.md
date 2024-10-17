@@ -12,10 +12,11 @@ To control three LEDs by turning them on and off sequentially with different tim
 ## Purpose of the Experiment:
 The experiment demonstrates how to control multiple LEDs using digital pins on the Arduino and implement time-based sequential lighting using delay functions. This helps in understanding the basic concepts of output control in microcontroller-based systems.
 
-## Applications:
-- Sequential LED lighting for visual effects.
-- Simulation of traffic light systems.
-- Projects requiring basic control of multiple outputs with timing functionality.
+ ##  Connections:
+   - Connect the longer leg (anode) of LED 1 to digital pin 11 on the Arduino.
+   - Connect the longer leg (anode) of LED 2 to digital pin 12 on the Arduino.
+   - Connect the longer leg (anode) of LED 3 to digital pin 13 on the Arduino.
+   - Connect the shorter leg (cathode) of all LEDs to the GND pin on the Arduino.
 
 ## Code:
 ```cpp
@@ -55,9 +56,7 @@ void loop() {
    - LED 3 will turn on for 3 seconds, then turn off.
    - The sequence will repeat continuously.
 
- ##  Connections:
-   - Connect the longer leg (anode) of LED 1 to digital pin 11 on the Arduino.
-   - Connect the longer leg (anode) of LED 2 to digital pin 12 on the Arduino.
-   - Connect the longer leg (anode) of LED 3 to digital pin 13 on the Arduino.
-   - Connect the shorter leg (cathode) of all LEDs to the GND pin on the Arduino.
-
+ ## Applications:
+- Sequential LED lighting for visual effects.
+- Simulation of traffic light systems.
+- Projects requiring basic control of multiple outputs with timing functionality
