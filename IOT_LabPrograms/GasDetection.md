@@ -2,9 +2,8 @@
 
 ## Components Required
 - **Arduino Uno** (or any compatible board)
-- **Gas Sensor Module** (e.g., MQ-2 or MQ-7)
+- **Gas Sensor Module** (e.g., MQ-2 or MQ-4)
 - **LED** (Any color)
-- **220Ω Resistor** (for LED)
 - **Breadboard** (optional, for easy connections)
 - **Jumper Wires**
 - **USB Power Supply**
@@ -50,6 +49,11 @@ void loop() {
   delay(1000); // Wait for 1 second before the next loop iteration
 }
 ```
+### Q1: What does `5.0 / 1023.0` represent?
+It converts the analog reading from the gas sensor to the corresponding voltage value.
+
+### Q2: What does `voltage > 1.5` check?
+It indicates a higher gas concentration. If true, it turns on the LED as an alert, based on the sensor's calibration.
 
 ## Output
 - When the gas concentration exceeds the threshold, the LED lights up, indicating the presence of gas.
