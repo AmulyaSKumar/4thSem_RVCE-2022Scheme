@@ -119,11 +119,11 @@ while True:
 ```
 ### Question
 What does `use_pulseio=False` mean in the `adafruit_dht.DHT11` sensor library?
+
 The `use_pulseio=False` argument disables the use of PulseIO, which reads pulse lengths from the DHT sensor. It is useful on microcontrollers that don’t support PulseIO or when PulseIO causes compatibility issues. The library will use alternate methods for reading data in this case.
 
 ### Applications
 - **Weather Monitoring:** Used in home weather stations to track local weather conditions.
 - **Greenhouse Monitoring:** Helps in maintaining optimal conditions for plant growth.
 - **HVAC Systems:** Used for controlling heating, ventilation, and air conditioning systems based on temperature and humidity levels.
-- **Data Logging:** Collecting environmental data for research or analysis.
 
