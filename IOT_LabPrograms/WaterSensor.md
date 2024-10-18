@@ -53,7 +53,7 @@ GPIO.setup(WPIN, GPIO.IN)
 
 # Function to send email notification
 def send_email():
-    msg = MIMEText('Water sensor detected water!')
+    msg = MIMEText('Water detection!')
     msg['Subject'] = 'Water sensor Update!'
     msg['From'] = EMAIL_ADDRESS
     msg['To'] = TO_EMAIL
