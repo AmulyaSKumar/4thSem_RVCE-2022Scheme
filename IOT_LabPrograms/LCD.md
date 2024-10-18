@@ -108,3 +108,20 @@ while True:
     ser.write(f"{mem_and_disk}\n".encode('utf-8'))  # Send Memory and Disk data
     time.sleep(1)
 ```
+## Output
+
+The LCD displays system stats such as:
+- Network utilization
+- CPU load
+- Memory usage
+- Disk space
+
+These statistics are updated every 5 seconds.
+
+---
+
+## Applications
+
+- **Monitoring real-time system performance**: This setup allows users to continuously monitor key system metrics.
+- **Integrating Arduino with computers**: It creates lightweight monitoring tools that can be easily deployed in various environments.
+- **Custom hardware interfaces**: This project can be expanded to develop tailored solutions for system diagnostics and performance monitoring.
