@@ -16,7 +16,7 @@ To develop a gas detector that can sense the presence of gas (e.g., LPG, methane
 - Connect the **VCC** pin of the gas sensor to **5V** on the Arduino.
 - Connect the **GND** pin of the gas sensor to **GND** on the Arduino.
 - Connect the **anode (long leg)** of the LED to **Digital Pin 13** on the Arduino (ledPin).
-- Connect the **cathode (short leg)** of the LED to a **220Ω resistor**, and then connect the other end of the resistor to **GND** on the Arduino.
+- Connect the **cathode (short leg)** of the LED to a **220Ω resistor**.
 
 ## Code
 ```cpp
