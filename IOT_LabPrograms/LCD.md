@@ -53,8 +53,33 @@ void loop() {
     }
 }
 ```
+# How to Run Python Script as Administrator on Windows
 
-##Python file(Run as Administrator)
+## Steps:
+
+1. **Open Command Prompt as Administrator**:
+   - Press **Windows + S** and search for `cmd`.
+   - Right-click on **Command Prompt** in the search results and choose **Run as Administrator**.
+
+2. **Navigate to Your Python Script Directory**:
+   - Use the `cd` command to change the directory to where your Python script is stored.
+   - Example:
+     ```bash
+     cd C:\path\to\your\script
+     ```
+
+3. **Run the Python Script**:
+   - Once you are in the correct directory, run the Python script by typing:
+     ```bash
+     python your_script.py
+     ```
+
+4. **Confirm Administrator Privileges**:
+   - Running the script in **Administrator mode** ensures that tasks requiring elevated permissions (e.g., accessing protected files or system settings) will execute successfully.
+
+**Note**: The Arduino code will work only if the Python script is running, as the Python script is responsible for sending data to the Arduino.
+   
+## Python file(Run as Administrator)
 ```python
 import psutil
 import serial
