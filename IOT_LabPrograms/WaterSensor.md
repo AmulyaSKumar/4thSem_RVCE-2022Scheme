@@ -43,7 +43,7 @@ import time
 
 # Email settings
 EMAIL_ADDRESS = 'abc@gmail.com'  # Your email address
-EMAIL_PASSWORD = ' '   # Your email password
+EMAIL_PASSWORD = ' '   # Your app password
 TO_EMAIL = ''    # Recipient's email address
 
 # Set up GPIO
